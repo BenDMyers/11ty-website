@@ -31,6 +31,10 @@ module.exports = function(eleventyConfig) {
 };
 ```
 
+{% callout "info" %}
+<strong>Note</strong>: <code>addWatchTarget</code> will watch specified directories and files for changes, and will rebuild Eleventy templates as a result. However, by default, it will not trigger other build steps such as Sass compilation. Consider adding such compilations to your <a href="/docs/events/"><code>eleventy.before</code> event</a>, or enabling your build tools or compilers' relevant watch modes.
+{% endcallout %}
+
 Eleventy will not add a watch for files or folders that are in `.gitignore`, unless `setUseGitIgnore` is turned off. See the chapter on [ignore files](/docs/ignores/#opt-out-of-using-.gitignore).
 
 ## Override Browsersync Server Options {% addedin "0.7.0" %}
